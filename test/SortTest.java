@@ -10,9 +10,10 @@ import static org.junit.Assert.assertEquals;
  * Created by kanghonggu on 2017. 5. 25..
  */
 
-public class BubbleSortTest {
+public class SortTest {
 
     private Sort bubbleSort;
+    private Sort selectionSort;
 
     private List<Integer> values;
 
@@ -22,9 +23,17 @@ public class BubbleSortTest {
     }
 
     @Test
-    public void 정렬_테스트 () {
+    public void 버블_정렬_테스트 () {
         bubbleSort = new BubbleSort();
         bubbleSort.sort(values);
+
+        assertEquals(Arrays.asList(1,2,3,4,5), values);
+    }
+
+    @Test
+    public void 선택_정렬_테스트 () {
+        selectionSort = new SelectionSort();
+        selectionSort.sort(values);
 
         assertEquals(Arrays.asList(1,2,3,4,5), values);
     }
