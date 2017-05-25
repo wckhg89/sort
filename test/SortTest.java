@@ -40,8 +40,19 @@ public class SortTest {
 
     @Test
     public void 스왑_테스트 () {
-        bubbleSort = new BubbleSort();
-        bubbleSort.swap(0,1, values);
+
+        Sort sort = new Sort() {
+            @Override
+            public void sort(List values) {
+
+            }
+
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        };
+        sort.swap(0,1, values);
 
         assertEquals(Arrays.asList(4,5,3,2,1), values);
     }

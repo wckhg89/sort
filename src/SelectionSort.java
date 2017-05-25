@@ -21,13 +21,6 @@ public class SelectionSort implements Sort<Integer> {
     }
 
     @Override
-    public void swap(int idx1, int idx2, List<Integer> values) {
-        int tmp = values.get(idx1);
-        values.set(idx1, values.get(idx2));
-        values.set(idx2, tmp);
-    }
-
-    @Override
     public int compare(Integer o1, Integer o2) {
         return 0;
     }
